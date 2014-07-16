@@ -6,8 +6,8 @@ To install enonic-plugin-archetype locally, run:
 2. cd target/generated-sources/archetype
 3. mvn install
 
-To create new project from archetype, select the installed archetype archetype com.enonic.plugin:enonic-plugin-archetype  
-in your favourite IDE like IntelliJ or Eclipse and fill inn groupId, artifactId, version and package, or use:   
+To create new project from archetype, select the installed archetype archetype com.enonic.plugin:enonic-plugin-archetype 
+in your favourite IDE like IntelliJ or Eclipse and fill inn groupId, artifactId, version and package, or use commandline:     
 
 1. mvn archetype:generate -DarchetypeCatalog=local
 2. Choose: # with local -> com.enonic.plugin:enonic-plugin-archetype (enonic-plugin-archetype)
@@ -16,7 +16,7 @@ in your favourite IDE like IntelliJ or Eclipse and fill inn groupId, artifactId,
 Example:    
 1: local -> com.enonic.plugin:enonic-plugin-archetype (enonic-plugin-archetype) 
 
-Choose a number or apply filter (format: [groupId:]artifactId, case sensitive contains): : 1 
+Choose a number or apply filter (format: [groupId:]artifactId, case sensitive contains): : 1    
 Define value for property 'groupId': : com.enonic.plugin 
 Define value for property 'artifactId': : my-enonic-plugin 
 Define value for property 'version':  1.0-SNAPSHOT:  
