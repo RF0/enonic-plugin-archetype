@@ -6,10 +6,21 @@ To install enonic-plugin-archetype locally, run:
 2. cd target/generated-sources/archetype
 3. mvn install
 
-To create new project from archetype, select the installed archetype archetype com.enonic.plugin:enonic-plugin-archetype 
-in your favourite IDE like IntelliJ or Eclipse and fill inn groupId, artifactId, version and package, or use commandline:     
+This will install the archetype in your local .m2/repository/com/enonic/plugin/enonic-plugin-archetype folder.
+Make sure you update your local .m2 repository in your IDE for the archetype to be available.
 
-1. mvn archetype:generate -DarchetypeCatalog=local
+Example for IntelliJ:  
+Go to Preferences->Maven->Repositories and press the update button after installing the archetype  
+To create new project from archetype:  
+
+1. Select 'New module'  
+2. Create module of type 'Maven', select 'Create from archetype'  
+3. Select com.enonic.plugin:enonic-plugin-archtype:4.7.6 (version follows enonic cms version)  
+4. Fill inn groupId, artifactId, version and package  
+
+Example for commandline:       
+
+1. mvn archetype:generate -DarchetypeCatalog=local  
 2. Choose: # with local -> com.enonic.plugin:enonic-plugin-archetype (enonic-plugin-archetype)
 3. Fill inn groupId, artifactId, version and package for your plugin, example:
 
