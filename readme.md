@@ -1,4 +1,4 @@
-#Enonic archetype project
+#Enonic plugin archetype
 
 To install enonic-plugin-archetype locally, run:
 
