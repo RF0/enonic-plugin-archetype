@@ -8,7 +8,7 @@
     <groupId>com.enonic.plugin</groupId>
     <artifactId>enonic-archetype-project</artifactId>
     <packaging>cms-plugin</packaging>
-    <version>${cms.version}</version>
+    <version>4.7.6</version>
 
     <scm>
         <connection>scm:git:https://github.com/RF0/enonic-archetype-project</connection>
@@ -27,7 +27,7 @@
         <!-- enonic cms api version -->
         <cms.version>4.7.6</cms.version>
         <!--Add your file-path to cms.home here-->
-        <cms.home>/</cms.home>
+        <cms.home>${build.directory}</cms.home>
         <!-- source encoding -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
