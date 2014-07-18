@@ -6,9 +6,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.enonic.plugin</groupId>
-    <artifactId>enonic-plugin</artifactId>
+    <artifactId>enonic-archetype-project</artifactId>
     <packaging>cms-plugin</packaging>
-    <version>${cms.version}}</version>
+    <version>${cms.version}</version>
 
     <scm>
         <connection>scm:git:https://github.com/RF0/enonic-archetype-project</connection>
