@@ -12,7 +12,7 @@
     <bean class="com.enonic.cms.api.plugin.ext.FunctionLibrary">
         <property name="displayName" value="Example FunctionLibrary extension"/>
         <property name="target">
-            <bean class="com.enonic.plugin.FunctionLibraryExt"/>
+            <bean class="com.enonic.plugin.FunctionLibraryImpl"/>
         </property>
         <property name="name" value="example"/>
     </bean>

@@ -8,13 +8,26 @@
     <groupId>com.enonic.plugin</groupId>
     <artifactId>enonic-plugin</artifactId>
     <packaging>cms-plugin</packaging>
-    <version>0.1-FINAL</version>
+    <version>4.7.6</version>
+
+    <scm>
+        <connection>scm:git:https://github.com/RF0/enonic-archetype-project</connection>
+    </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>artifact-repository</id>
+            <url>http://repo.enonic.com/public</url>
+        </repository>
+    </distributionManagement>
+
+
 
     <properties>
         <!-- enonic cms api version -->
         <cms.version>4.7.6</cms.version>
         <!--Add your file-path to cms.home here-->
-        <cms.home></cms.home>
+        <cms.home>/</cms.home>
         <!-- source encoding -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
@@ -38,6 +51,18 @@
                 <configuration>
                     <source>1.6</source>
                     <target>1.6</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>2.1</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-scm-plugin</artifactId>
+                <version>1.9</version>
+                <configuration>
+                    <tag>${project.artifactId}-${project.version}</tag>
                 </configuration>
             </plugin>
             <plugin>

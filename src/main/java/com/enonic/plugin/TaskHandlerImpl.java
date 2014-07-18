@@ -3,28 +3,26 @@ package com.enonic.plugin;
 import com.enonic.cms.api.client.Client;
 import com.enonic.cms.api.plugin.PluginConfig;
 import com.enonic.cms.api.plugin.PluginEnvironment;
-import org.jdom.Document;
-import org.jdom.Element;
+import com.enonic.cms.api.plugin.ext.TaskHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+import java.util.Date;
 import java.util.List;
+import java.util.Properties;
 
 /*
- Configured in resources/META-INF/spring/context.xml
-
- Call from invokeExtension DS
- https://enonic.com/en/docs/enonic-cms-47?page=Util+datasources#Utildatasources-invokeExtension
- <datasources>
-  <datasource name="invokeExtension">
-    <parameter name="name">example.hello</parameter>
-    <parameter name="param1">Say Hello!</parameter>
-  </datasource>
-</datasources>
+    Activated in Enonic Admin System->Job scheduler when
+    ${cms.home}/config/cms.properties cms.scheduler.enabled=true
 */
+@Component
+public class TaskHandlerImpl extends TaskHandler {
 
-public class FunctionLibraryExt {
+   public TaskHandlerImpl(){
+       setDisplayName("Example TaskHandler implementation");
+   }
 
     Logger LOG = LoggerFactory.getLogger(getClass());
 
@@ -35,15 +33,16 @@ public class FunctionLibraryExt {
     PluginEnvironment pluginEnvironment;
 
     PluginConfig pluginConfig;
-
     @Autowired
     public void setPluginConfig(List<PluginConfig> pluginConfig) {
         //TODO: Temporary hack with List<PluginConfig> here
         this.pluginConfig = pluginConfig.get(0);
     }
 
-    public Document hello(String param1) {
-        LOG.info(param1);
-        return new Document(new Element("FunctionLibraryExample").setText(param1));
+    @Override
+    public void execute(Properties properties) throws Exception {
+        LOG.info(getDisplayName());
+        LOG.info("Executed scheduled task at {}", new Date());
+
     }
 }

@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 @Component
-public class TextExtractorExt extends TextExtractor {
+public class TextExtractorImpl extends TextExtractor {
 
     @Override
     public boolean canHandle(String s) {

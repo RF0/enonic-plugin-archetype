@@ -5,10 +5,8 @@ import com.enonic.cms.api.plugin.ext.userstore.*;
 import java.util.List;
 import java.util.Set;
 
-/**
- * Created by rfo on 16/07/14.
- */
-public class RemoteUserStoreExt  implements RemoteUserStore{
+public class RemoteUserStoreImpl implements RemoteUserStore{
+
     @Override
     public Set<UserFieldType> getSupportedFieldTypes() {
         return null;
