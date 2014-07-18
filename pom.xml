@@ -10,24 +10,11 @@
     <packaging>cms-plugin</packaging>
     <version>4.7.6</version>
 
-    <scm>
-        <connection>scm:git:https://github.com/RF0/enonic-archetype-project</connection>
-    </scm>
-
-    <distributionManagement>
-        <repository>
-            <id>artifact-repository</id>
-            <url>http://repo.enonic.com/public</url>
-        </repository>
-    </distributionManagement>
-
-
-
     <properties>
         <!-- enonic cms api version -->
         <cms.version>4.7.6</cms.version>
         <!--Add your file-path to cms.home here-->
-        <cms.home>${build.directory}</cms.home>
+        <cms.home>${project.build.directory}</cms.home>
         <!-- source encoding -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
