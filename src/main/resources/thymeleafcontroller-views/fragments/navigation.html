@@ -1,0 +1,12 @@
+<ul data-th-fragment="top">
+    <li data-th-class="${requestPath == 'dothis' ? 'pure-menu-selected ' : ''} + 'menu-item-divided'">
+        <a data-th-href="${url + '/thymeleafcontroller/dothis'}">Do this</a>
+    </li>
+    <li data-th-class="${requestPath == 'dothis/andthis' ? 'pure-menu-selected ' : ''} + 'menu-item-divided submenu'">
+        <a data-th-href="${url + '/thymeleafcontroller/dothis/andthis'}">|_and this</a>
+    </li>
+    <li data-th-class="${requestPath == 'dothat' ? 'pure-menu-selected ' : ''} + 'menu-item-divided'">
+        <a data-th-href="${url + '/thymeleafcontroller/dothat'}">Do that</a>
+    </li>
+</ul>
+

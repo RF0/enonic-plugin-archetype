@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <!--http://www.thymeleaf.org/whatsnew21.html-->
+    <head data-th-include="fragments/head :: common"/>
+    <body>
+        <div id="layout">
+            <!-- Menu toggle -->
+            <a href="#menu" id="menuLink" class="menu-link">
+                <!-- Hamburger icon -->
+                <span></span>
+            </a>
+
+            <div id="menu">
+                <div class="pure-menu pure-menu-open">
+                    <a class="pure-menu-heading" href="#">Thymeleaf</a>
+                    <ul data-th-replace="fragments/navigation :: top"/>
+                </div>
+            </div>
+            <div id="main">
+                <div class="header">
+                    <h1>Thymeleaf controller example</h1>
+                </div>
+                <div class="content">
+                    <h2 class="content-subhead" data-th-text="${requestPath}"/>
+
+                    <h3 data-th-if="${message!=null}" data-th-text="${message}"/>
+
+                    <div data-th-if="${requestPath!=null and not requestPath.isEmpty()}">
+                        <div data-th-replace="${requestPath}"/>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <footer data-th-include="fragments/footer :: scripts"/>
+    </body>
+</html>

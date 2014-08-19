@@ -3,6 +3,7 @@ package com.enonic.plugin;
 import com.enonic.cms.api.client.Client;
 import com.enonic.cms.api.plugin.PluginConfig;
 import com.enonic.cms.api.plugin.PluginEnvironment;
+import com.enonic.cms.api.plugin.ext.FunctionLibrary;
 import org.jdom.Document;
 import org.jdom.Element;
 import org.jdom.output.Format;
@@ -10,6 +11,7 @@ import org.jdom.output.XMLOutputter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
@@ -26,7 +28,8 @@ import java.util.List;
 </datasources>
 */
 
-public class FunctionLibraryImpl {
+@Component
+public class FunctionLibraryImpl{
 
     Logger LOG = LoggerFactory.getLogger(getClass());
 
@@ -40,7 +43,7 @@ public class FunctionLibraryImpl {
 
     @Autowired
     public void setPluginConfig(List<PluginConfig> pluginConfig) {
-        //TODO: Temporary hack with List<PluginConfig> here
+        //TODO: temporary necessary hack with List<PluginConfig> autowireing here
         this.pluginConfig = pluginConfig.get(0);
     }
 

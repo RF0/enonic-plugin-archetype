@@ -27,7 +27,7 @@ public class ResponseFilterImpl extends HttpResponseFilter {
 
     @Autowired
     public void setPluginConfig(List<PluginConfig> pluginConfig) {
-        //TODO: Temporary hack with List<PluginConfig> here
+        //TODO: temporary necessary hack with List<PluginConfig> autowireing here
         this.pluginConfig = pluginConfig.get(0);
     }
 

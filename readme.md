@@ -1,4 +1,20 @@
-#Enonic plugin archetype
+#cms plugin archetype
+
+Generated archetype project will include one example of each of Enonic's extension types. 
+
+1. FunctionLibrary     
+2. HttpAutoLogin     
+3. HttpController (simple example + one advanced example with thymeleaf view)    
+4. HttpInterceptor     
+5. HttpResponseFilter     
+6. TaskHandler     
+7. TextExtractor     
+8. Authenticator     
+9. RemoteUserStoreFactory
+
+Delete the extensions you don't want to use before starting your project, and expand the ones you want to implement.
+If not using the ThymeleafController, delete the src/java/com.enonic.plugin.thymeleafcontroller package, the
+curresponding package below src/resources and also the src/resources/thymeleafcontroller-views folder.
 
 To install enonic-plugin-archetype locally, run:
 
