@@ -16,16 +16,23 @@ Delete the extensions you don't want to use before starting your project, and ex
 If not using the ThymeleafController, delete the src/java/com.enonic.plugin.thymeleafcontroller package, the
 curresponding package below src/resources and also the src/resources/thymeleafcontroller-views folder.
 
-To install enonic-plugin-archetype locally, run:
+Note: Instructions written for Mac.
 
-1. mvn archetype:create-from-project
-2. cd target/generated-sources/archetype
-3. mvn install
+##Requirements
+* Maven   
+
+##Installation
+
+To install locally, run these lines in Terminal:
+
+1. mvn archetype:create-from-project   
+2. cd target/generated-sources/archetype    
+3. mvn install   
 
 This will install the archetype in your local .m2/repository/com/enonic/plugin/enonic-plugin-archetype folder.
 Make sure you update your local .m2 repository in your IDE for the archetype to be available.
 
-Example for IntelliJ:  
+**Example for IntelliJ:**       
 Go to Preferences->Maven->Repositories and press the update button after installing the archetype  
 To create new project from archetype:  
 
@@ -34,14 +41,13 @@ To create new project from archetype:
 3. Select com.enonic.plugin:enonic-plugin-archtype:4.7.6 (version follows enonic cms version)  
 4. Fill inn groupId, artifactId, version and package  
 
-Example for commandline:       
-
+**Example for commandline:**      
 1. mvn archetype:generate -DarchetypeCatalog=local  
-2. Choose: # with local -> com.enonic.plugin:enonic-plugin-archetype (enonic-plugin-archetype)
-3. Fill inn groupId, artifactId, version and package for your plugin, example:
+2. Choose: # with local -> com.enonic.plugin:enonic-plugin-archetype (enonic-plugin-archetype)  
+3. Fill inn groupId, artifactId, version and package for your plugin, example:  
 
-Example:    
-1: local -> com.enonic.plugin:enonic-plugin-archetype (enonic-plugin-archetype) 
+**Example:**           
+1. local -> com.enonic.plugin:enonic-plugin-archetype (enonic-plugin-archetype)   
 
 Choose a number or apply filter (format: [groupId:]artifactId, case sensitive contains): : 1    
 Define value for property 'groupId': : com.enonic.plugin 
